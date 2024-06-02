@@ -1,0 +1,32 @@
+{% if predicted_image %}
+    <img src="{{ predicted_image }}" alt="Predicted Image" class="predicted-image">
+{% endif %}
+<h2>{{ predicted_class }}</h2>
+<p>{{ nutrition_info | safe }}</p>
+
+<!-- Add the input field and button -->
+<div>
+    <label for="correctFood">If the image is not predicted correctly, type the correct food:</label>
+    <input type="text" id="correctFood" name="correctFood">
+    <button id="submitCorrectFood">Go</button>
+</div>
+<div id="res"></div>
+<script>
+    var led = document.getElementById('res');
+    document.getElementById('submitCorrectFood').onclick = function() {
+        const correctFood = document.getElementById('correctFood').value;
+        const formData = new FormData();
+        formData.append('correctFood', correctFood);
+        
+
+        fetch('/correct_prediction', {
+            method: 'POST',
+            body: formData
+        }).then(response => response.json()).then(data => {
+            // document.querySelector('.result-container').innerHTML = data.html;
+            console.log(data);
+            res.innerHTML += data.html
+        });
+    }
+</script>
+

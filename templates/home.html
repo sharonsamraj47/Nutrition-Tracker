@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="static\css\styles.css">
+</head>
+<body>
+
+<div class="header0">
+    <div class="header1">
+        <div class="dum"><img src="static\Thrive &.jpg" alt="Image">
+        </div>
+        
+        <h1>AI Powered Nutrition Tracker</h1>
+    </div>
+
+
+    <div class="header2">
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tracker">Tracker</a></li>
+            <li><a href="#tips">Tips</a></li>
+           
+            <li><a href="#Diet">Diet Recipe</a></li>
+            <li><a href="#Workout">workout</a></li>
+        </ul>
+    </div>
+</div>
+
+    <div class="image-container">
+        <img src="static\headerimage.jpeg.avif" alt="Image">
+    </div>
+
+    <div class="dummyHome">
+
+        <h2>Embrace health, reach your fitness goals, and prioritize well-being. Wellness made simple. Thrive and shine.</h2>
+
+    <div class="head">
+        <h3 class="hea">Our innovative image tracker simplifies nutrient tracking by letting users snap photos of meals, swiftly analyzing them to provide accurate nutritional data for seamless monitoring of dietary intake.</h3>
+        <h3 class="hea">Determine your daily caloric needs with our nutrient tracking website's calorie calculator, efficiently calculating personalized requirements based on factors like age, weight, height, and activity level for optimal nutritional planning.</h3>
+        <h3 class="hea">We offer a versatile meal plan featuring balanced recipes, designed to meet diverse dietary needs. Each recipe includes detailed nutritional information for informed and enjoyable meal planning.</h3>
+    </div>
+    </div>
+    <div class="body" id="tracker">
+    
+
+    <div class="container">
+        <div class="button-container">
+            <h1>Find My Macros</h1>
+            <button onclick="showImageUploadForm()">Upload from System</button>
+            <button onclick="captureFromCamera()">Use Camera</button>
+        </div>
+        <div class="button-container">
+            <h1>Find Daily Calorie Intake</h1>
+            <button onclick="showBMRContainer()">Go</button>
+        </div>
+
+        <div id="image-upload-container" class="box-container" style="display: none;">
+            <h1>Upload Image</h1>
+            <form id="uploadForm" enctype="multipart/form-data" action="/predict" method="post">
+                <input type="file" name="imageFile" id="imageFile" accept="image/*">
+                <button type="submit" id="submitBtn">Upload</button>
+            </form>
+        </div>
+        <div id="result-container" class="result-container">
+            {% include 'result_partial.html' %}
+        </div>
+        </div>
+
+    </div>
+    <div id="tips">
+        <h2>Tips to Ease Your Way to Reach Your Fitness Goals</h2>
+        <ol>
+            <li>
+                <h3>The Three Essential Things</h3>
+                <ul>
+                    <li>Diet</li>
+                    <li>Exercise</li>
+                    <li>Rest</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Diet</h3>
+                <ul>
+                    <li>A sapling with all the nutrients in the world but with no water does not become a tree. The same applies to you.</li>
+                    <li>Track only your daily calorie, protein, and carbohydrates. All other nutrients will be covered in any food you eat.</li>
+                    <li>You must eat based on your basal metabolic rate. Use our calculator to find your daily calorie, protein, and carb intake.</li>
+                    <!-- Add more diet tips here -->
+                </ul>
+            </li>
+            <li>
+                <h3>Exercise</h3>
+                <ul>
+                    <li>Let's assume that you follow the diet perfectly. But if you don't use the energy the food provides you, it will store as fat, ie no progress for you.</li>
+                    <li>Do cardio exercises such as jogging, walking, swimming, cycling at least half an hour a day. It improves your stamina and burns any extra calories you eat. Choose what you prefer.</li>
+                    <!-- Add more exercise tips here -->
+                </ul>
+            </li>
+            <li>
+                <h3>Rest</h3>
+                <ul>
+                    <li>Your muscles need rest to use the protein to grow stronger. It is not a machine you know? You need to take about 1 to 3 mins rest between each set.</li>
+                    <li>Take 24 hours rest per week and sleep have a minimum of 8 hours of sleep every day.</li>
+                    <!-- Add more rest tips here -->
+                </ul>
+            </li>
+        </ol>
+        <p>Stretch every day.</p>
+        <p>Do not skip meals.</p>
+        <p>Eat only 1 hour before or after a workout.</p>
+        <p>Be consistent and don't lose hope.</p>
+        <p>Fitness is not just a goal. It is a Lifestyle. <strong>Thrive and Shine.</strong></p>
+    </div>
+
+    <div id="Diet">
+        <div id="recipes-container">
+            <!-- Chicken Fried Rice -->
+            <div class="recipe">
+                <h2>Chicken Fried Rice</h2>
+                <p>Ingredients:</p>
+                <ul>
+                    <li>2 cups cooked rice (preferably cooled)</li>
+                    <li>1 cup diced chicken breast</li>
+                    <li>1 cup mixed vegetables (carrots, peas, corn, and green beans)</li>
+                    <li>2 tablespoons soy sauce</li>
+                    <li>2 cloves garlic, minced</li>
+                    <li>Salt and pepper to taste</li>
+                    <li>Optional: chopped green onions for garnish</li>
+                </ul>
+                <p>Instructions:</p>
+                <ol>
+                    <li>In a large skillet or wok over medium-high heat, add the diced chicken breast. Cook until it's no longer pink, about 5-6 minutes.</li>
+                    <li>Add minced garlic to the skillet and cook for about 30 seconds until fragrant.</li>
+                    <!-- Add more instructions here -->
+                </ol>
+            </div>
+        
+            <!-- Chicken Gravy -->
+            <div class="recipe">
+                
+                    <h2>Chicken Gravy</h2>
+                    <p><strong>Ingredients:</strong></p>
+                    <ul>
+                        <li>2 tablespoons butter</li>
+                        <li>2 tablespoons all-purpose flour</li>
+                        <li>1 cup chicken broth</li>
+                        <li>1/2 cup milk or heavy cream</li>
+                        <li>1/2 teaspoon garlic powder</li>
+                        <li>1/2 teaspoon onion powder</li>
+                        <li>Salt and pepper to taste</li>
+                        <li>Optional: chopped fresh herbs like parsley or thyme for garnish</li>
+                    </ul>
+                    <p><strong>Instructions:</strong></p>
+                    <ol>
+                        <li>In a saucepan over medium heat, melt the butter.</li>
+                        <li>Once the butter is melted, sprinkle the flour over it and whisk continuously to form a roux. Cook the roux for 1-2 minutes until it turns a light golden color.</li>
+                        <!-- Add more instructions here -->
+                    </ol>
+                
+            </div>
+        
+            <!-- Paneer Sandwich -->
+           <!-- Paneer Sandwich -->
+<div class="recipe">
+    <h2>Paneer Sandwich</h2>
+    <p><strong>Ingredients:</strong></p>
+    <ul>
+        <li>200 grams paneer (Indian cottage cheese), crumbled or sliced</li>
+        <li>8 slices of bread (white, wheat, or multigrain)</li>
+        <li>1 small onion, thinly sliced</li>
+        <li>1 small tomato, thinly sliced</li>
+        <li>1 small cucumber, thinly sliced</li>
+        <li>1 green chili (optional), thinly sliced</li>
+        <li>1/2 teaspoon chaat masala (optional)</li>
+        <li>Salt and pepper to taste</li>
+        <li>Butter or ghee for grilling</li>
+    </ul>
+    <p><strong>Instructions:</strong></p>
+    <ol>
+        <li>Heat a non-stick pan over medium heat. If you're using crumbled paneer, you can sauté it lightly with some salt and pepper until it's slightly browned. If you're using sliced paneer, you can grill it until it's slightly golden on both sides. Set aside.</li>
+        <li>Lay out the bread slices on a clean surface. Optionally, you can spread a thin layer of butter or ghee on one side of each bread slice.</li>
+        <li>On one slice of bread, arrange a layer of sliced paneer, followed by slices of onion, tomato, cucumber, and green chili if using.</li>
+        <li>Sprinkle a pinch of chaat masala over the vegetables for extra flavor if desired.</li>
+        <li>Season with salt and pepper to taste.</li>
+        <li>Place another slice of bread on top to form a sandwich.</li>
+        <li>Repeat the process to make more sandwiches if desired.</li>
+        <li>Heat a grill pan or sandwich maker over medium heat. Once hot, place the prepared sandwiches on the grill.</li>
+        <li>Grill the sandwiches for 2-3 minutes on each side until they are golden brown and crisp.</li>
+        <li>Remove the sandwiches from the grill and let them cool for a minute before serving.</li>
+        <li>Cut the sandwiches diagonally into halves or quarters.</li>
+        <li>Serve hot with ketchup, chutney, or any dipping sauce of your choice.</li>
+    </ol>
+</div>
+
+        
+            <!-- Soya Chunk Curry -->
+            <!-- Soya Chunk Curry -->
+<div class="recipe">
+    <h2>Soya Chunk Curry</h2>
+    <p><strong>Ingredients:</strong></p>
+    <ul>
+        <li>1 cup soya chunks</li>
+        <li>2 onions, finely chopped</li>
+        <li>2 tomatoes, pureed</li>
+        <li>2-3 green chilies, slit</li>
+        <li>1 tablespoon ginger-garlic paste</li>
+        <li>1 teaspoon cumin seeds</li>
+        <li>1 teaspoon coriander powder</li>
+        <li>1/2 teaspoon turmeric powder</li>
+        <li>1/2 teaspoon red chili powder</li>
+        <li>1/2 teaspoon garam masala</li>
+        <li>Salt to taste</li>
+        <li>2 tablespoons oil</li>
+        <li>Fresh coriander leaves for garnish</li>
+    </ul>
+    <p><strong>Instructions:</strong></p>
+    <ol>
+        <li>Boil water in a saucepan. Once the water comes to a boil, add the soya chunks and cook for about 5-7 minutes.</li>
+        <li>Drain the water and squeeze out excess water from the soya chunks. Set aside.</li>
+        <li>Heat oil in a pan over medium heat. Add the cumin seeds and let them splutter.</li>
+        <li>Add the chopped onions and sauté until they turn golden brown.</li>
+        <li>Add the ginger-garlic paste and slit green chilies. Sauté for a minute until the raw smell disappears.</li>
+        <li>Add the tomato puree and cook until the oil separates from the masala.</li>
+        <li>Add the coriander powder, turmeric powder, red chili powder, garam masala, and salt. Mix well and cook for a couple of minutes.</li>
+        <li>Add the boiled soya chunks to the masala and mix until they are well coated.</li>
+        <li>Add water as needed to adjust the consistency of the gravy.</li>
+        <li>Cover and simmer for 8-10 minutes on low heat, allowing the flavors to blend together.</li>
+        <li>Once the soya chunks are tender and the gravy has thickened to your desired consistency, turn off the heat.</li>
+        <li>Garnish with fresh coriander leaves.</li>
+        <li>Serve hot with rice, roti, or naan.</li>
+    </ol>
+</div>
+
+        
+            <!-- Egg Masala -->
+            <div class="recipe">
+                <h2>Egg Masala</h2>
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>6 hard-boiled eggs, peeled and halved</li>
+                    <li>2 onions, finely chopped</li>
+                    <li>2 tomatoes, finely chopped</li>
+                    <li>2 green chilies, slit lengthwise</li>
+                    <li>1 tablespoon ginger-garlic paste</li>
+                    <li>1 teaspoon cumin seeds</li>
+                    <li>1 teaspoon coriander powder</li>
+                    <li>1/2 teaspoon turmeric powder</li>
+                    <li>1/2 teaspoon red chili powder (adjust to taste)</li>
+                    <li>1/2 teaspoon garam masala</li>
+                    <li>Salt to taste</li>
+                    <li>2 tablespoons oil or ghee</li>
+                    <li>Fresh coriander leaves for garnish</li>
+                </ul>
+                <p><strong>Instructions:</strong></p>
+                <ol>
+                    <li>Heat oil or ghee in a pan over medium heat. Add the cumin seeds and let them splutter.</li>
+                    <li>Add the chopped onions and sauté until they turn golden brown.</li>
+                    <li>Add the ginger-garlic paste and slit green chilies. Sauté for a minute until the raw smell disappears.</li>
+                    <li>Add the chopped tomatoes and cook until they turn soft and mushy.</li>
+                    <li>Add the coriander powder, turmeric powder, red chili powder, garam masala, and salt. Mix well and cook for a couple of minutes until the spices are fragrant.</li>
+                    <li>Add a little water if the masala is too dry and continue cooking until the oil separates from the masala.</li>
+                    <li>Gently add the halved hard-boiled eggs to the masala, making sure they are coated evenly with the masala.</li>
+                    <li>Cover and simmer for 5-7 minutes on low heat, allowing the flavors to blend together.</li>
+                    <li>Once the eggs are heated through and the masala has thickened to your desired consistency, turn off the heat.</li>
+                    <li>Garnish with fresh coriander leaves.</li>
+                    <li>Serve hot with rice, roti, or naan.</li>
+                </ol>
+            </div>
+            
+        </div>
+        
+    </div>
+    <div id="Workout">
+        <div class="workout-routine">
+            <h2>Workout Routine 1</h2>
+            <p><strong>Warm-up:</strong> 5-10 minutes of dynamic movements</p>
+            <ul>
+              <li>Bench press or chest press: 3 sets of 8-10 reps</li>
+              <li>Pull-ups or lat pulldowns: 3 sets of 8-10 reps</li>
+              <li>Shoulder press: 3 sets of 10-12 reps</li>
+              <li>Bicep curls: 3 sets of 10-12 reps</li>
+              <li>Tricep dips or tricep pushdowns: 3 sets of 10-12 reps</li>
+            </ul>
+            <p><strong>Cool down:</strong> 5-10 minutes of static stretching</p>
+          </div>
+        
+          <div class="workout-routine">
+            <h2>Workout Routine 2</h2>
+            <p><strong>Warm-up:</strong> 5-10 minutes of dynamic movements</p>
+            <ul>
+              <li>Squats: 3 sets of 10-12 reps</li>
+              <li>Push-ups: 3 sets of 8-10 reps</li>
+              <li>Bent-over rows: 3 sets of 10-12 reps</li>
+              <li>Lunges: 3 sets of 10-12 reps (each leg)</li>
+              <li>Planks: 3 sets, hold for 30-60 seconds</li>
+            </ul>
+            <p><strong>Cool down:</strong> 5-10 minutes of static stretching</p>
+          </div>
+    </div>
+    
+    <script>
+        function showImageUploadForm() {
+            document.getElementById('image-upload-container').style.display = 'block';
+        }
+
+        function captureFromCamera() {
+            // Use browser's getUserMedia API to access the camera
+            navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function(stream) {
+                // Create a video element to display the camera stream
+                var videoElement = document.createElement('video');
+                videoElement.setAttribute('autoplay', '');
+                videoElement.srcObject = stream;
+                document.body.appendChild(videoElement);
+
+                // Create a canvas element to capture the image
+                var canvasElement = document.createElement('canvas');
+                canvasElement.width = videoElement.videoWidth;
+                canvasElement.height = videoElement.videoHeight;
+                var canvasContext = canvasElement.getContext('2d');
+
+                // Capture the current frame from the video stream
+                videoElement.addEventListener('loadeddata', function() {
+                    canvasContext.drawImage(videoElement, 0, 0, canvasElement.width, canvasElement.height);
+                    var imageData = canvasElement.toDataURL('image/jpeg');
+
+                    // Close the video stream
+                    stream.getVideoTracks()[0].stop();
+
+                    // Convert the base64-encoded image data to a Blob
+                    var byteString = atob(imageData.split(',')[1]);
+                    var arrayBuffer = new ArrayBuffer(byteString.length);
+                    var uint8Array = new Uint8Array(arrayBuffer);
+                    for (var i = 0; i < byteString.length; i++) {
+                        uint8Array[i] = byteString.charCodeAt(i);
+                    }
+                    var blob = new Blob([uint8Array], { type: 'image/jpeg' });
+
+                    // Create a FormData object and append the image Blob to it
+                    var formData = new FormData();
+                    formData.append('imageFile', blob, 'camera_image.jpg');
+
+                    // Send the captured image to the server for prediction
+                    fetch('/predict', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.text())
+                    .then(html => {
+                        // Update the result container with the prediction result
+                        document.getElementById('result-container').innerHTML = html;
+                        // Scroll to the result container
+                        document.getElementById('result-container').scrollIntoView({ behavior: 'smooth' });
+                    })
+                    .catch(error => console.error('Error:', error));
+                });
+            })
+            .catch(function(error) {
+                console.error('Error accessing camera:', error);
+            });
+        }
+    </script>
+    <script src="static\js\script.js"></script>
+</body>
+</html>

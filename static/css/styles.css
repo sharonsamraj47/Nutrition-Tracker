@@ -1,0 +1,339 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.header0{
+    position:fixed;
+    width:100%;
+    background-color: #ffffff;
+    top:0
+}
+
+.header2 {
+    text-align: center;
+    padding: 20px;
+    height:40px;
+}
+
+.header1 {
+
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+.dum{
+    width:100px;
+    height:80px;
+}
+
+.header1 img {
+    max-width: 100%;
+    height: auto;
+}
+
+.dummyHome{
+    height:50vh;
+    text-align: center;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.hea{
+    padding:20px;
+    background-color: #14df44;
+    width: 350px;
+    height: 200px;
+    text-align: justify;
+
+}
+
+.head{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.header2 {
+    background-color: #11590f;
+    padding: 10px 0;
+    position:fixed;
+    width:100%;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    padding-top: 10px;
+    margin: 0;
+    z-index: 1000;
+}
+
+.nav-menu li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-menu a:hover {
+    text-decoration: underline;
+}
+
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+    width:100vw;
+   
+}
+
+.image-container img {
+    width: 100%;
+    height: 60vh;
+}
+
+.container {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 670px;
+    box-shadow: 0 0 10px #94e387;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.button-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.button-container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.button-container button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button-container button:hover {
+    background-color: #1af86b;
+}
+
+.box-container {
+    background-color: #94e387;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#image-upload-container {
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.result-container {
+    margin-top: 20px;
+}
+
+/* Body and general styles */
+
+
+/* Heading styles */
+h2, h3 {
+    color: #11590f;
+}
+
+/* List styles */
+ul, ol {
+    color: #11590f;
+    padding-left: 20px;
+}
+
+/* Paragraph styles */
+p {
+    color: #11590f;
+    line-height: 1.5;
+}
+
+/* Strong tag styles */
+strong {
+    color: #14df44;
+}
+
+/* List item styles */
+li {
+    margin-bottom: 10px;
+}
+
+
+
+
+/* Tip container styles */
+#tips {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1200px;
+    box-shadow: 0 0 10px #94e387;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+/* Tip section styles */
+#tips > * {
+    margin-bottom: 20px;
+}
+
+/* General styles */
+#recipes-container {
+    padding: 20px;
+    background-color: #f4f4f4;
+   
+}
+
+.recipe {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #94e387;
+    padding-top: 150px; 
+    padding-bottom: 150px;
+}
+
+/* Heading styles */
+.recipe h2 {
+    color: #11590f;
+}
+
+/* List styles */
+.recipe ul, .recipe ol {
+    color: #11590f;
+}
+
+/* Paragraph styles */
+.recipe p {
+    color: #11590f;
+    line-height: 1.5;
+}
+
+/* List item styles */
+.recipe li {
+    margin-bottom: 5px;
+}
+
+/* List item numbering */
+.recipe ol li::before {
+    color: #14df44;
+}
+
+/* Optional: Add more specific styles for instructions, ingredients, etc. */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .workout-routine {
+    margin-bottom: 20px;
+  }
+  
+  .workout-routine h2 {
+    color: #11590f;
+  }
+  
+  .workout-routine p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .workout-routine ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .workout-routine ul li {
+    margin-bottom: 5px;
+  }
+  
+  .workout-routine strong {
+    color: #14df44;
+  }
+  
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .nav-menu li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
+
+/* Styles for dynamically created elements */
+.input-field {
+    width: 100%;
+    padding: 8px;
+    margin: 15px 0;
+    box-sizing: border-box;
+}
+
+
+.bmr-container label{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bmr-result {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
